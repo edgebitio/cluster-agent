@@ -18,7 +18,7 @@ jobs:
       contents: write # for pushing the signed tag
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -65,7 +65,7 @@ jobs:
       id-token: write # For AWS OIDC
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Authenticate to AWS
         uses: aws-actions/configure-aws-credentials@v1-node16

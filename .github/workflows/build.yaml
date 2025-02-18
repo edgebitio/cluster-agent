@@ -28,7 +28,7 @@ jobs:
     runs-on: ${{matrix.runner}}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Authenticate to AWS
         if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
@@ -84,7 +84,7 @@ jobs:
             }
           EOF
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ matrix.arch == 'amd64' }}
         with:
           name: metadata.json
